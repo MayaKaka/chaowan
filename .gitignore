@@ -1,0 +1,8 @@
+# Folders #
+/node_modules/
+
+# Project Files #
+startup.*
+*.project
+*.sublime-project
+*.sublime-workspace
