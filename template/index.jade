@@ -1,4 +1,349 @@
-extends layout
 
-block content
-    h1 Express Web Server
+doctype html
+html
+
+    head
+        meta(charset="utf-8")
+        title 超玩时代
+        meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
+        link(rel="stylesheet" href="/static/libs/bootstrap/css/bootstrap.min.css")
+        script(src="https://cdn.bootcss.com/jquery/1.12.3/jquery.min.js")
+        script(src="/static/libs/bootstrap/js/bootstrap.min.js")
+        style.
+            html {
+                font-size: 100px;
+            }
+            body {
+                font-size: .14rem;
+                font-family: Microsoft YaHei;
+            }
+            .navbar {
+                background: url(http://www.dadayou.com/tpl/home/file/image/dong.gif);
+                box-shadow: 0 4px 4px rgba(0,0,0,.2);
+                margin: 0;
+                z-index: 1;
+            }
+            .navbar-brand {
+                display: inline-block;
+                padding: .06rem;
+            }
+            .navbar-menu {
+                list-style: none;
+            }
+            .navbar-menu li {
+                display: inline-block;
+                padding: .20rem .04rem;
+            }
+            .navbar-menu li a {
+                padding: .04rem .12rem;
+                font-size: .16rem;
+                border-radius: .24rem;
+            }
+            .navbar-menu li a:hover {
+                color: #fff;
+                background: #1791f0;
+                text-decoration: none;
+
+            }
+            .w1200 {
+                position: relative;
+                width: 1200px;
+                margin: 0 auto;
+            }
+            .slides {
+                position: relative;
+            }
+            .slides-main {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                padding: 0;
+                list-style: none;
+            }
+            .login-form {
+                height: 300px;
+                background: #e4d8d4;
+                font-size: .12rem;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+            .login-form .form-group {
+                width: 240px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .login-form-label {
+                padding-top: 20px;
+                padding-bottom: 10px;
+            }
+            .login-form-label div {
+                font-size: .15rem;
+                border-bottom: 1px solid #bfbfbf;
+            }
+            .login-form-user {
+                height: 70px;
+                background: url(/static/img/index.png) 0 -318px;
+            }
+            .login-form-user input {
+                border: none;
+                margin-left: 44px;
+                height: 34px;
+                background: rgba(0,0,0,0);
+                outline: none;
+            }
+            .main {
+                margin-top: 40px;
+            }
+            .main-container {
+                background: url(/static/img/main-bg.png) 0 0 no-repeat;
+                background-color: #fff;
+            }
+            .main-container > .container {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+            .block-hot-box {
+                margin-bottom: 20px
+            }
+    body
+        header
+            nav.navbar
+                .w1200
+                    a.navbar-brand(href="#")
+                        img.img-responsive(src="http://www.dadayou.com/tpl/home/test/new_source/images/logo.png")
+                    ul.navbar-menu
+                        li.active
+                            a(href="#") 主页
+                        li
+                            a(href="#") 用户中心
+                        li
+                            a(href="#") 游戏大厅
+                        li
+                            a(href="#") 资讯中心
+                        li
+                            a(href="#") 重置中心
+                        li
+                            a(href="#") 客服中心
+            .slides
+                ul.slides-main
+                    li.active
+                        img.img-responsive(src="http://www.dadayou.com/tpl/home/test/new_source/images/fbdl.jpg" alt="...")
+                .w1200
+                    .row
+                        .col-md-3
+                            form.login-form
+                                .form-group.login-form-label
+                                    div
+                                        label 账号登录
+                                .form-group.login-form-user
+                                    div
+                                        input(type="email" placeholder="请输入用户名")
+                                    div
+                                        input(type="password" placeholder="请输入密码")
+                                .form-group
+                                    .checkbox
+                                        label
+                                            input(type='checkbox')
+                                            |  自动登录
+                                .form-group
+                                    button.btn.btn-primary(type='submit') 马上登录
+                                .form-group
+                                    a(href="#") 没有账号？立即注册
+
+                        .col-md-9 222 
+
+        .main
+            .w1200
+                .main-container
+                    .container
+                        .row
+                            .col-md-3
+                                label 新闻公告
+                                h5 大大游《蛮荒之怒》金钻兑换RMB公告
+                                .row
+                                    .col-md-4
+                                        img(src="http://www.dadayou.com/tpl/home/test/new_source/images/80x80(1).png")
+                                    .col-md-8 大大游《蛮荒之怒》金钻兑换RMB公告    详细>>
+                                ul.list-group
+                                    li.list-group-item 《蛮荒之怒》6月9日临时维护公告
+                                    li.list-group-item 《蛮荒之怒》6月9日临时维护公告
+                                    li.list-group-item 《蛮荒之怒》6月9日临时维护公告
+                                    li.list-group-item 《蛮荒之怒》6月9日临时维护公告
+                            .col-md-9
+                                label 推荐游戏
+                                .row
+                                    .col-md-4
+                                        .block-recommand-box
+                                            img.img-responsive(src="http://www.dadayou.com/tpl/home/test/new_source/images/game/shouye/86/t02.jpg")
+                                            .row
+                                                .col-md-8
+                                                    label 蛮荒之怒
+                                                .col-md-4
+                                                    button.btn.btn-primary.btn-xs 进入游戏
+                                    .col-md-4
+                                        .block-recommand-box
+                                            img.img-responsive(src="http://www.dadayou.com/tpl/home/test/new_source/images/game/shouye/86/t02.jpg")
+                                            .row
+                                                .col-md-8
+                                                    label 蛮荒之怒
+                                                .col-md-4
+                                                    button.btn.btn-primary.btn-xs 进入游戏
+                                    .col-md-4
+                                        .block-recommand-box
+                                            img.img-responsive(src="http://www.dadayou.com/tpl/home/test/new_source/images/game/shouye/86/t02.jpg")
+                                            .row
+                                                .col-md-8
+                                                    label 蛮荒之怒
+                                                .col-md-4
+                                                    button.btn.btn-primary.btn-xs 进入游戏
+                        .row
+                            .col-md-3
+                                label 开服列表
+                                div
+                                    ul.nav.nav-tabs(role='tablist')
+                                        li.active(role='presentation')
+                                            a(href='#home', aria-controls='home', role='tab', data-toggle='tab') Home
+                                        li(role='presentation')
+                                            a(href='#profile', aria-controls='profile', role='tab', data-toggle='tab') Profile
+                                    .tab-content
+                                        #home.tab-pane.active(role='tabpanel') 
+                                            table.table.table-striped
+                                                tr
+                                                    td 游戏
+                                                    td 服数
+                                                    td 日期
+                                                tr
+                                                    td 蛮荒之怒
+                                                    td 双线31区
+                                                    td 06-11 12:00
+                                                tr
+                                                    td 蛮荒之怒
+                                                    td 双线31区
+                                                    td 06-11 12:00
+                                                tr
+                                                    td 蛮荒之怒
+                                                    td 双线31区
+                                                    td 06-11 12:00
+                                                tr
+                                                    td 蛮荒之怒
+                                                    td 双线31区
+                                                    td 06-11 12:00
+                                                tr
+                                                    td 蛮荒之怒
+                                                    td 双线31区
+                                                    td 06-11 12:00
+                                                tr
+                                                    td 蛮荒之怒
+                                                    td 双线31区
+                                                    td 06-11 12:00
+                                                tr
+                                                    td 蛮荒之怒
+                                                    td 双线31区
+                                                    td 06-11 12:00
+                                        #profile.tab-pane(role='tabpanel') ...
+                            .col-md-9
+                                label 热门游戏
+                                .row
+                                    .col-md-4
+                                        .block-hot-box
+                                            .row
+                                                .col-md-8
+                                                    img(src="http://www.dadayou.com/tpl/home/test/new_source/images/game/youSmall/86.png")
+                                                .col-md-4
+                                                    label 蛮荒之怒
+                                                    p 角色扮演
+                                    .col-md-4
+                                        .block-hot-box
+                                            .row
+                                                .col-md-8
+                                                    img(src="http://www.dadayou.com/tpl/home/test/new_source/images/game/youSmall/86.png")
+                                                .col-md-4
+                                                    label 蛮荒之怒
+                                                    p 角色扮演
+                                    .col-md-4
+                                        .block-hot-box
+                                            .row
+                                                .col-md-8
+                                                    img(src="http://www.dadayou.com/tpl/home/test/new_source/images/game/youSmall/86.png")
+                                                .col-md-4
+                                                    label 蛮荒之怒
+                                                    p 角色扮演
+                                .row
+                                    .col-md-4
+                                        .block-hot-box
+                                            .row
+                                                .col-md-8
+                                                    img(src="http://www.dadayou.com/tpl/home/test/new_source/images/game/youSmall/86.png")
+                                                .col-md-4
+                                                    label 蛮荒之怒
+                                                    p 角色扮演
+                                    .col-md-4
+                                        .block-hot-box
+                                            .row
+                                                .col-md-8
+                                                    img(src="http://www.dadayou.com/tpl/home/test/new_source/images/game/youSmall/86.png")
+                                                .col-md-4
+                                                    label 蛮荒之怒
+                                                    p 角色扮演
+                                    .col-md-4
+                                        .block-hot-box
+                                            .row
+                                                .col-md-8
+                                                    img(src="http://www.dadayou.com/tpl/home/test/new_source/images/game/youSmall/86.png")
+                                                .col-md-4
+                                                    label 蛮荒之怒
+                                                    p 角色扮演
+                                .row
+                                    .col-md-4
+                                        .block-hot-box
+                                            .row
+                                                .col-md-8
+                                                    img(src="http://www.dadayou.com/tpl/home/test/new_source/images/game/youSmall/86.png")
+                                                .col-md-4
+                                                    label 蛮荒之怒
+                                                    p 角色扮演
+                                    .col-md-4
+                                        .block-hot-box
+                                            .row
+                                                .col-md-8
+                                                    img(src="http://www.dadayou.com/tpl/home/test/new_source/images/game/youSmall/86.png")
+                                                .col-md-4
+                                                    label 蛮荒之怒
+                                                    p 角色扮演
+                                    .col-md-4
+                                        .block-hot-box
+                                            .row
+                                                .col-md-8
+                                                    img(src="http://www.dadayou.com/tpl/home/test/new_source/images/game/youSmall/86.png")
+                                                .col-md-4
+                                                    label 蛮荒之怒
+                                                    p 角色扮演
+                                .row
+                                    .col-md-4
+                                        .block-hot-box
+                                            .row
+                                                .col-md-8
+                                                    img(src="http://www.dadayou.com/tpl/home/test/new_source/images/game/youSmall/86.png")
+                                                .col-md-4
+                                                    label 蛮荒之怒
+                                                    p 角色扮演
+                                    .col-md-4
+                                        .block-hot-box
+                                            .row
+                                                .col-md-8
+                                                    img(src="http://www.dadayou.com/tpl/home/test/new_source/images/game/youSmall/86.png")
+                                                .col-md-4
+                                                    label 蛮荒之怒
+                                                    p 角色扮演
+                                    .col-md-4
+                                        .block-hot-box
+                                            .row
+                                                .col-md-8
+                                                    img(src="http://www.dadayou.com/tpl/home/test/new_source/images/game/youSmall/86.png")
+                                                .col-md-4
+                                                    label 蛮荒之怒
+                                                    p 角色扮演
+
+
+

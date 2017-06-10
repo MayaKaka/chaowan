@@ -31,7 +31,7 @@ app.set('views', path_template);
 /* 设置视图模版引擎jade */
 app.set('view engine', 'jade');
 /* 设置站点icon */
-app.use(favicon(pathJoin(path_static, 'img/favicon.ico')));
+// app.use(favicon(pathJoin(path_static, 'img/favicon.ico')));
 /* 设置日志方式dev(开发模式) */
 // app.use(logger('dev'));
 
